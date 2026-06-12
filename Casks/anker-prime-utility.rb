@@ -2,10 +2,11 @@ cask "anker-prime-utility" do
   version "0.2.22"
   sha256 "f9a9c0317f8cd65fb67d362225702fefc0f6f8d44383c9ff4275434886a5110c"
 
-  url "https://updates.niiconn.com/anker-prime-tool/AnkerPrimeUtility-#{version}.zip"
+  url "https://updates.niiconn.com/anker-prime-tool/AnkerPrimeUtility-#{version}.zip",
+      verified: "updates.niiconn.com/anker-prime-tool/"
   name "Anker Prime Utility"
   desc "macOS utility for the Anker Prime Charger A2345 / 250W Desktop Charger"
-  homepage "https://github.com/niiconn/macos-anker-prime-charger"
+  homepage "https://github.com/niiconn/homebrew-ankerprimeutility-cask"
 
   livecheck do
     url "https://updates.niiconn.com/anker-prime-tool/appcast.xml"
@@ -13,7 +14,7 @@ cask "anker-prime-utility" do
   end
 
   depends_on arch: :arm64
-  depends_on macos: ">= :sonoma"
+  depends_on macos: :sonoma
 
   app "AnkerPrimeUtility.app"
 
